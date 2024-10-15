@@ -1,38 +1,215 @@
-.App {
-  text-align: center;
-}
+/* App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.quiz-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  background-color: #f0f0f0;
 }
 
-.App-link {
-  color: #61dafb;
+.quiz-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center; /* Ensures the text itself is centered */
+  color: #333; /* Darker color for the title text */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.question-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  margin: 20px;
+  text-align: center;
+}
+
+.answer-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.answer-button {
+  background-color: #6200ea;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.answer-button:hover {
+  background-color: #3700b3;
+}
+
+/* App.css */
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Center the quiz app on the screen */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+}
+
+.quiz-section {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+}
+
+/* Question styling */
+.question-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Styling for the answer buttons */
+.answer-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.answer-button {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.answer-button:hover {
+  background: #0056b3;
+}
+
+/* Styling for the scoreboard */
+.scoreboard {
+  margin-bottom: 15px;
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Styling for the result display */
+.result-container {
+  background: #007bff;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+/* Timer styling */
+.timer {
+  font-size: 1.2rem;
+  color: #ff0000; /* Red color to highlight the urgency */
+  margin-bottom: 10px;
+}
+
+/* Error and loading message styling */
+.error-message {
+  color: #ff0000;
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+.loading-message {
+  font-size: 1.2rem;
+  color: #007bff;
+  margin: 20px 0;
+}
+
+/* Settings menu styling */
+.settings-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.settings-item {
+  margin: 10px 0;
+}
+
+.settings-item label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.settings-item input,
+.settings-item select {
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.start-quiz-button {
+  background: #007bff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 15px;
+}
+
+.start-quiz-button:hover {
+  background: #0056b3;
+}
+
+/* Leaderboard styling */
+.leaderboard-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.leaderboard-list {
+  list-style: none;
+  padding: 0;
+}
+
+.leaderboard-item {
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
 }
